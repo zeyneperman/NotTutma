@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BkmKitap.SQlite.NoteEntryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Notes" HorizontalOptions="Center"></Label>
+            <Editor x:Name="editor" Text="{Binding Text}" Placeholder="Enter Note"></Editor>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Text="save" Clicked="Button_Clicked" Grid.Column="0"></Button>
+                <Button Text="delete" Clicked="Button_Clicked_1" Grid.Column="1"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
