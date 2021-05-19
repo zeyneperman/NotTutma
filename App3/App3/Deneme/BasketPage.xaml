@@ -11,8 +11,7 @@
                             <ViewCell>
                                 <StackLayout>
                                     <Label Text="{Binding BookName}"></Label>
-                                    <Label Text="{Binding Description}"></Label>
-                                    <Image Source="{Binding BookImage}"></Image>
+
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

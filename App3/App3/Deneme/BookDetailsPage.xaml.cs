@@ -16,17 +16,17 @@ namespace App3.Deneme
         {
             InitializeComponent();
             ItemNameShow.Text = Name;
-            AuthorItemShow.Text = Author;
-            ImageCall.Source = new UriImageSource()
-            {
-                Uri = new Uri(source)
-            };
+            //AuthorItemShow.Text = Author;
+            //ImageCall.Source = new UriImageSource()
+            //{
+            //    Uri = new Uri(source)
+            //};
         }
 
         private async void AddToBasket(object sender, EventArgs e)
         {
-            var book = BindingContext as Book;
-            await App.BkmDatabase.SaveBookAsync(book);
+            var book = BindingContext as BasketBook;
+            await App.BasketDatabase.SaveBasketBookAsync(book);
             await Navigation.PushAsync(new BasketPage());
         }
     }

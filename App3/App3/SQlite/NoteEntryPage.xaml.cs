@@ -25,8 +25,8 @@ namespace BkmKitap.SQlite
         private async void Button_Clicked(object sender, EventArgs e)
         {
             var note = BindingContext as Note;
-
             note.Date = DateTime.Now;
+
             await App.Database.SaveNoteAsync(note);
             await Navigation.PopAsync();
         }

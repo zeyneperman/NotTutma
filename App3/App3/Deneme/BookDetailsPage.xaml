@@ -9,14 +9,14 @@
                     <ScrollView>
                         <StackLayout HorizontalOptions="Center">
                             <StackLayout >
-                                <Image x:Name="ImageCall" HeightRequest="100" WidthRequest="100"/>
+                                <!--<Image x:Name="ImageCall" HeightRequest="100" WidthRequest="100"/>-->
                                 <Label x:Name="ItemNameShow" HorizontalTextAlignment="Center"/>
-                                <Label x:Name="AuthorItemShow" Margin="20,20" FontSize="Small"/>
+                                <!--<Label x:Name="AuthorItemShow" Margin="20,20" FontSize="Small"/>-->
 
                             </StackLayout>
                         </StackLayout>
                     </ScrollView>
-                    <StackLayout VerticalOptions="End" Background="White" Padding="0,0,0,0">
+                    <StackLayout Background="White" >
                         <AbsoluteLayout>
                             <Button Text="Sepete Ekle" Background="FireBrick" Clicked="AddToBasket"></Button>
                         </AbsoluteLayout>

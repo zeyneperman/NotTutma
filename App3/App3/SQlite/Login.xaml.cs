@@ -38,10 +38,7 @@ namespace App3.SQlite
                 if(item.Password == editor1.Text && item.UserName == editor.Text)
                 {
                     editor.Text = "Giriş Başarılı";
-                }
-                else
-                {
-                    editor1.Text = "Tekrar Dene";
+                    break;
                 }
             }
         }

@@ -23,5 +23,10 @@ namespace App3.Deneme
             var mydetails = e.Item as Book;
             await Navigation.PushAsync(new BookDetailsPage(mydetails.BookName, mydetails.Description, mydetails.BookImage));
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BasketPage());
+        }
     }
 }
