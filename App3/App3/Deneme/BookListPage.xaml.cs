@@ -21,7 +21,10 @@ namespace App3.Deneme
         private async void BooksListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var mydetails = e.Item as Book;
-            await Navigation.PushAsync(new BookDetailsPage(mydetails.BookName, mydetails.Description, mydetails.BookImage));
+            await Navigation.PushAsync(new BookDetailsPage()
+            {
+                BindingContext = mydetails
+            });
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

@@ -16,24 +16,8 @@ namespace BkmKitap.SQlite
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Note>();
             _database.CreateTableAsync<Book>();
-            _database.CreateTableAsync<BasketBook>();
+            
         }
-
-        public Task<List<BasketBook>> GetBasketBooksAsync()
-        {
-            return _database.Table<BasketBook>().ToListAsync();
-        }
-
-        public Task<int> SaveBasketBookAsync(BasketBook book)
-        {
-            return _database.InsertAsync(book);
-        }
-
-        public Task<int> DeleteBasketBookAsync(BasketBook book)
-        {
-            return _database.DeleteAsync(book);
-        }
-
         // // // // // // // // //
 
         public Task<List<Book>> GetBooksAsync()

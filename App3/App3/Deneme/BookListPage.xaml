@@ -18,12 +18,12 @@
                             <StackLayout Padding="0,0,0,0">
                                 <StackLayout  BackgroundColor="White">
                                     <AbsoluteLayout >
-                                        <!--<Image x:Name="imgBook" Source="{Binding BookImage}" ScaleX="1" ScaleY="1" BackgroundColor="White" Aspect="AspectFit"
-                                               AbsoluteLayout.LayoutBounds="65,20,300,400"></Image>-->
+                                        <Image x:Name="imgBook" Source="{Binding BookImage}" ScaleX="1" ScaleY="1" BackgroundColor="White" Aspect="AspectFit"
+                                               AbsoluteLayout.LayoutBounds="65,20,300,400"></Image>
                                     </AbsoluteLayout>
                                     <StackLayout>
                                         <Label x:Name="lblBookName" TextColor="Black" XAlign="Center" YAlign="Center" Text="{Binding BookName}" />
-                                        <!--<Label x:Name="lblBookAuthhor" TextColor="Black" XAlign="Center" YAlign="Center" Text="{Binding Description}" />-->
+                                        <Label x:Name="lblBookAuthhor" TextColor="Black" XAlign="Center" YAlign="Center" Text="{Binding Description}" />
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>

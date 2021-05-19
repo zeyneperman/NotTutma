@@ -11,7 +11,6 @@
                             <ViewCell>
                                 <StackLayout>
                                     <Label Text="{Binding BookName}"></Label>
-
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

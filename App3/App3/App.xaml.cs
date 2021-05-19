@@ -14,22 +14,11 @@ namespace App3
             InitializeComponent();
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
 
-            MainPage = new NavigationPage(new NotesPage());
+            MainPage = new NavigationPage(new BookListPage());
 
         }
 
         public static string FolderPath { get; private set; }
-
-        public static NoteDatabase basketdatabase { get; set; }
-        public static NoteDatabase BasketDatabase
-        {
-            get
-            {
-                if (basketdatabase == null)
-                    basketdatabase = new NoteDatabase(Path.Combine(App.FolderPath, "BasketBookDb.db3")); //"BooksDb.db3"
-                return basketdatabase;
-            }
-        }
 
         public static NoteDatabase database { get; set; }
         public static NoteDatabase Database

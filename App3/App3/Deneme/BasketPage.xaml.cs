@@ -21,7 +21,7 @@ namespace App3.Deneme
         {
             base.OnAppearing();
 
-            BindingContext = await App.BasketDatabase.GetBasketBooksAsync();
+            BindingContext = await App.Database.GetBooksAsync();
 
         }
     }
