@@ -22,7 +22,7 @@ namespace App3.SQlite
         //protected override async void OnAppearing()
         //{
         //    base.OnAppearing();
-            
+
         //    foreach (var item in  await App.Database.GetNotesAsync())
         //    {
         //        notes.Add(item);
@@ -32,10 +32,9 @@ namespace App3.SQlite
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //var note = BindingContext as Note;
-            
             foreach (var item in await App.Database.GetNotesAsync())
             {
-                if(item.Password == editor1.Text && item.UserName == editor.Text)
+                if (item.Password == editor1.Text && item.Email == editor.Text)
                 {
                     editor.Text = "Giriş Başarılı";
                     break;

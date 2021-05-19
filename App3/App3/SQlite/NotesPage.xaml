@@ -14,7 +14,7 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="{Binding UserName}"></Label>
+                                    <Label Text="{Binding Email}"></Label>
                                     <Label Text="{Binding Password}"></Label>
                                 </StackLayout>
                             </ViewCell>

@@ -22,17 +22,15 @@ namespace BkmKitap.SQlite
 
 
         //Handle Save
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void RegisterButton(object sender, EventArgs e)
         {
             var note = BindingContext as Note;
-            note.Date = DateTime.Now;
-
             await App.Database.SaveNoteAsync(note);
             await Navigation.PopAsync();
         }
 
         //Handle delete
-        private async void Button_Clicked_1(object sender, EventArgs e)
+        private async void DeleteButton(object sender, EventArgs e)
         {
             var note = BindingContext as Note;
             await App.Database.DeleteNoteAsync(note);

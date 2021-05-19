@@ -3,15 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App3.SQlite.Login">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="Black" Padding="20,70,20,10">
+            <AbsoluteLayout>
+                <Editor x:Name="editor" Placeholder="Email" BackgroundColor ="WhiteSmoke" 
+                        AbsoluteLayout.LayoutBounds="0,70,369,40"></Editor>
+                <Editor x:Name="editor1" Placeholder="Şifre" BackgroundColor ="WhiteSmoke"
+                        AbsoluteLayout.LayoutBounds="0,120,369,40"></Editor>
+            </AbsoluteLayout>
+            <!--<StackLayout>
+                <Label Text="*Hatalı E-Posta veya Şifre" IsVisible="{Binding isfail}" TextColor="White"></Label>
+            </StackLayout>-->
             <StackLayout>
-                <Label Text="Notes Login Page" HorizontalOptions="Center"></Label>
-                <Editor x:Name="editor" Placeholder="Enter Note"></Editor>
-                <Editor x:Name="editor1" Placeholder="Enter Note"></Editor>
+                <Button Text="Giriş" Clicked="Button_Clicked" Background="DarkOrange"
+                        Grid.Column="0" CornerRadius="5"></Button>
             </StackLayout>
-            <StackLayout>
-                <Button Text="save" Clicked="Button_Clicked" Grid.Column="0"></Button>
-            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Padding="40,16,0,0" Text="Bir Hesabınız yok mu?" TextColor="White" Grid.Column="0"></Label>
+                <Button Text="Kayıt Ol" Grid.Column="1" Background="Black" TextColor="DarkOrange"></Button>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

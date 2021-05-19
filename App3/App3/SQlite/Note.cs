@@ -10,9 +10,8 @@ namespace BkmKitap.SQlite
         [PrimaryKey,AutoIncrement ]
         public int Id { get; set; }
         public string UserName { get; set; }
+        public string UserSurname { get; set; }
         public string Password { get; set; }
-        public string FileName { get; set; }
-        public string Text { get; set; }
-        public DateTime Date { get; set; }
+        public string Email { get; set; }
     }
 }
