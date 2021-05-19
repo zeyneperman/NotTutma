@@ -1,4 +1,5 @@
 ﻿using App3;
+using App3.SQlite;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,5 +39,6 @@ namespace BkmKitap.SQlite
             await Navigation.PopAsync();
 
         }
+
     }
 }

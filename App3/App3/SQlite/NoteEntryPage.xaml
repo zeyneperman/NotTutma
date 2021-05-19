@@ -5,9 +5,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Notes" HorizontalOptions="Center"></Label>
-            <Editor x:Name="editor" Text="{Binding Text}" Placeholder="Enter Note"></Editor>
+            <Editor x:Name="editor" Text="{Binding UserName}" Placeholder="Enter Note"></Editor>
+            <Editor x:Name="editor1" Text="{Binding Password}" Placeholder="Enter Note"></Editor>
+
             <Grid>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>

@@ -1,4 +1,5 @@
-﻿using BkmKitap.SQlite;
+﻿using App3.Deneme;
+using BkmKitap.SQlite;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -13,15 +14,25 @@ namespace App3
             InitializeComponent();
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
 
-            MainPage = new NavigationPage(new NotesPage());
+            MainPage = new NavigationPage(new BookListPage());
 
         }
 
         public static string FolderPath { get; private set; }
 
-
         public static NoteDatabase database { get; set; }
         public static NoteDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                    database = new NoteDatabase(Path.Combine(App.FolderPath, "BooksDb.db3"));
+                return database;
+            }
+        }
+
+        public static NoteDatabase bkmdatabase { get; set; }
+        public static NoteDatabase BkmDatabase
         {
             get
             {

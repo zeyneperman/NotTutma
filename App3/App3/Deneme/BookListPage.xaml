@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Deneme.BookListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Items}"
+                   HasUnevenRows="true"
+                       x:Name="BooksListView" 
+                   ItemTapped="BooksListView_ItemTapped"
+                   SeparatorVisibility="Default" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0,0,0,0">
+                                <StackLayout  BackgroundColor="White">
+                                    <AbsoluteLayout >
+                                        <Image x:Name="imgBook" Source="{Binding BookImage}" ScaleX="1" ScaleY="1" BackgroundColor="White" Aspect="AspectFit"
+                                               AbsoluteLayout.LayoutBounds="65,20,300,400"></Image>
+                                    </AbsoluteLayout>
+                                    <StackLayout>
+                                        <Label x:Name="lblBookName" TextColor="Black" XAlign="Center" YAlign="Center" Text="{Binding BookName}" />
+                                        <Label x:Name="lblBookAuthhor" TextColor="Black" XAlign="Center" YAlign="Center" Text="{Binding Description}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

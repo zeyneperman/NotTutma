@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using App3;
+using App3.Deneme;
 using SQLite;
 
 namespace BkmKitap.SQlite
@@ -12,9 +14,26 @@ namespace BkmKitap.SQlite
         public NoteDatabase(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<Note>().Wait();
+            _database.CreateTableAsync<Note>();
+            _database.CreateTableAsync<Book>();
         }
 
+        public Task<List<Book>> GetBooksAsync()
+        {
+            return _database.Table<Book>().ToListAsync();
+        }
+
+        public Task<int> SaveBookAsync(Book book)
+        {
+            return _database.InsertAsync(book);
+        }
+
+        public Task<int> DeleteBookAsync(Book book)
+        {
+            return _database.DeleteAsync(book);
+        }
+
+        // // // // // // // // //
         public Task<List<Note>> GetNotesAsync()
         {
             return _database.Table<Note>().ToListAsync();

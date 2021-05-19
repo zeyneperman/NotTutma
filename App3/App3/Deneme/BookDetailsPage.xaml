@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Deneme.BookDetailsPage">
+    <ContentPage.Content>
+        <StackLayout Background="White">
+            <Frame >
+                <StackLayout>
+                    <ScrollView>
+                        <StackLayout HorizontalOptions="Center">
+                            <StackLayout >
+                                <Image x:Name="ImageCall" HeightRequest="100" WidthRequest="100"/>
+                                <Label x:Name="ItemNameShow" HorizontalTextAlignment="Center"/>
+                                <Label x:Name="AuthorItemShow" Margin="20,20" FontSize="Small"/>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                    <StackLayout VerticalOptions="End" Background="White" Padding="0,0,0,0">
+                        <AbsoluteLayout>
+                            <Button Text="Sepete Ekle" Background="FireBrick" Clicked="AddToBasket"></Button>
+                        </AbsoluteLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,29 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BkmKitap.SQlite.NotesPage">
+             x:Class="App3.Deneme.BasketPage">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Button Text="+" Clicked="Button_Clicked"></Button>
-            </StackLayout>
-            <StackLayout>
-                <ListView x:Name="listView"
-                      ItemSelected="listView_ItemSelected">
+                <ListView x:Name="listView">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="{Binding UserName}"></Label>
-                                    <Label Text="{Binding Password}"></Label>
+                                    <Label Text="{Binding BookName}"></Label>
+                                    <Label Text="{Binding Description}"></Label>
+                                    <Image Source="{Binding BookImage}"></Image>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </StackLayout>
-            <StackLayout>
-                <Button Text="Login" Clicked="Button_Clicked_1"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
