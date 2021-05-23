@@ -15,8 +15,8 @@ namespace UITest1
         Platform platform;
 
         static readonly Func<AppQuery, AppQuery> GirisButton = c => c.Marked("GirişButonu");
-        static readonly Func<AppQuery, AppQuery> EmailEditor = c => c.Marked("EmailEditor");
-        static readonly Func<AppQuery, AppQuery> ŞifreEditor = c => c.Marked("ŞifreEditor");
+        static readonly Func<AppQuery, AppQuery> EmailEditor = c => c.Marked("EmailEditor").Text("");
+        static readonly Func<AppQuery, AppQuery> ŞifreEditor = c => c.Marked("ŞifreEditor").Text("");
 
         public Tests(Platform platform)
         {
@@ -32,10 +32,22 @@ namespace UITest1
         [Test]
         public void WelcomeTextIsDisplayed()
         {
-            AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
-            app.Screenshot("Welcome screen.");
+            AppResult[] result = app.Query(EmailEditor);
+            AppResult[] result1 = app.Query(ŞifreEditor);
 
-            Assert.IsTrue(results.Any());
+            app.Tap(GirisButton);
+
+            result = app.Query(EmailEditor);
+            Assert.IsEmpty(result, "Email boş döndürülemez!");
+
+            result1 = app.Query(ŞifreEditor);
+            Assert.IsEmpty(result, "Şifre boş döndürülemez!");
+
+
+            //AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
+            //app.Screenshot("Welcome screen.");
+
+            //Assert.IsTrue(results.Any());
         }
     }
 }
