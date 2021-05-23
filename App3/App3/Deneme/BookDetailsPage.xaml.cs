@@ -20,8 +20,13 @@ namespace App3.Deneme
         private async void AddToBasket(object sender, EventArgs e)
         {
             var book = BindingContext as Book;
+
             await App.Database.SaveBookAsync(book);
-            await Navigation.PushAsync(new BasketPage());
+
+            await Navigation.PushAsync(new BasketPage()
+            { 
+                BindingContext = await App.Database.GetBooksAsync()
+            });
         }
     }
 }

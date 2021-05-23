@@ -1,4 +1,5 @@
 ﻿using App3.Deneme;
+using App3.SQlite;
 using BkmKitap.SQlite;
 using System;
 using System.IO;
@@ -14,7 +15,7 @@ namespace App3
             InitializeComponent();
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
 
-            MainPage = new NavigationPage(new BookListPage());
+            MainPage = new NavigationPage(new LoginMVM()); //NotesPage
 
         }
 

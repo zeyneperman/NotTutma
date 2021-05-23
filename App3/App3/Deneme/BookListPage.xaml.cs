@@ -26,6 +26,7 @@ namespace App3.Deneme
                 BindingContext = mydetails
             });
         }
+        InMemoryBasketDal basket = new InMemoryBasketDal();
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
