@@ -1,6 +1,4 @@
-﻿using App3.Deneme;
-using App3.SQlite;
-using BkmKitap.SQlite;
+﻿using BkmKitap.SQlite;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -15,8 +13,7 @@ namespace App3
             InitializeComponent();
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
 
-            MainPage = new NavigationPage(new LoginMVM()); //NotesPage
-
+            MainPage = new NavigationPage(new NotesPage()); //NotesPage
         }
 
         public static string FolderPath { get; private set; }

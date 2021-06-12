@@ -1,5 +1,4 @@
 ﻿using App3;
-using App3.SQlite;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -52,7 +51,10 @@ namespace BkmKitap.SQlite
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LoginMVM()); // Login()
+            await Navigation.PushAsync(new NoteEntryPage()
+            {
+                BindingContext = new Note()
+            }); // Login()
         }
     }
 }
