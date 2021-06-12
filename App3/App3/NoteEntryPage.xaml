@@ -3,22 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BkmKitap.SQlite.NoteEntryPage">
     <ContentPage.Content>
-        <StackLayout Background="Black" Padding="10,30,10,0">
-            <Label Text="Kayıt Ol" FontSize="Large" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" x:Name="lblRegister"/>
-            <StackLayout>
-                <Label Text="Ad *" TextColor="White"></Label>
-                <Entry Text="{Binding UserName}" Background="WhiteSmoke" Keyboard="Text" VerticalOptions="Center" HorizontalOptions="Fill" x:Name="AddNameEntry"></Entry>
-                <Label Text="Soyad *" TextColor="White"></Label>
-                <Entry Text="{Binding UserSurname}" Background="WhiteSmoke" Keyboard="Text" HorizontalOptions="Fill" VerticalOptions="Fill" x:Name="AddSurnameEntry" ></Entry>
-                <Label Text="Cep Telefonu *" TextColor="White"></Label>
-                <Entry Keyboard="Numeric" Background="WhiteSmoke" HorizontalOptions="FillAndExpand" x:Name="AddPhoneNumberEnty"></Entry>
-                <Label Text="E-Posta *" TextColor="White"></Label>
+        <StackLayout Background="Black" Padding="10,80,10,0">
+            <Label Text="Note Kayıt Sayfası" FontSize="Large" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" x:Name="lblRegister"/>
+            <StackLayout Padding="0,10,0,0">
                 <Editor x:Name="editor" Text="{Binding Email}" Background="WhiteSmoke" Placeholder="Enter Note"></Editor>
-                <Label Text="Parola *" TextColor="White" ></Label>
                 <Editor x:Name="editor1" Text="{Binding Password}" Background="WhiteSmoke" Placeholder="Enter Note"></Editor>
-                <StackLayout>
-                    <Button Text="Kayıt Ol" Padding="0,10,0,0" Clicked="RegisterButton" Background="DarkOrange"></Button>
-                    <Button Text="Kayıt sil" Padding="0,10,0,0" Clicked="DeleteButton" Background="DarkOrange"></Button>
+                <StackLayout Padding="0,30,0,0">
+                    <Button Text="Not Al" FontSize="19" Clicked="RegisterButton" Background="DarkOrange"></Button>
+                    <Button Text="Sil" FontSize="19" Clicked="DeleteButton" Background="DarkOrange"></Button>
                 </StackLayout>
 
             </StackLayout>
