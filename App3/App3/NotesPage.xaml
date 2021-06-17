@@ -3,19 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BkmKitap.SQlite.NotesPage">
     <ContentPage.Content>
-        <StackLayout Background="Black">
+        <StackLayout Background="SandyBrown">
             <StackLayout Padding="15,10,15,10">
-                <Button BackgroundColor="DarkOrange" Text="Not Ekle" Clicked="Button_Clicked"></Button>
+                <Button BackgroundColor="SaddleBrown" TextColor="White" Text="Not Ekle" Clicked="AddNote_Clicked"></Button>
             </StackLayout>
-            <StackLayout Padding="20,0,0,0">
+            <StackLayout Padding="20,0,20,0">
                 <ListView x:Name="listView"
                       ItemSelected="listView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
-                                    <Label FontSize="17" TextColor="White" Text="{Binding Email}"></Label>
-                                    <Label TextColor="WhiteSmoke" Text="{Binding Password}"></Label>
+                                <StackLayout BackgroundColor="PeachPuff" Padding="10,0,0,0">
+                                    <Label TextColor="SaddleBrown" Text="{Binding Header}"></Label>
+                                    <Label TextColor="Peru" Text="{Binding Content}"></Label>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

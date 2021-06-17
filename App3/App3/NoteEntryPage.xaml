@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BkmKitap.SQlite.NoteEntryPage">
     <ContentPage.Content>
-        <StackLayout Background="Black" Padding="10,80,10,0">
-            <Label Text="Note Kayıt Sayfası" FontSize="Large" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" x:Name="lblRegister"/>
+        <StackLayout Background="SandyBrown" Padding="10,120,10,10">
+            <Label Text="Not ekle" FontSize="Large" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" x:Name="lblRegister"/>
             <StackLayout Padding="0,10,0,0">
-                <Editor x:Name="editor" Text="{Binding Email}" Background="WhiteSmoke" Placeholder="Enter Note"></Editor>
-                <Editor x:Name="editor1" Text="{Binding Password}" Background="WhiteSmoke" Placeholder="Enter Note"></Editor>
+                <Editor x:Name="editor" Text="{Binding Header}" Background="WhiteSmoke" Placeholder="Enter Note"></Editor>
+                <Editor x:Name="editor1" Text="{Binding Content}" Background="WhiteSmoke" Placeholder="Enter Note"></Editor>
                 <StackLayout Padding="0,30,0,0">
-                    <Button Text="Not Al" FontSize="19" Clicked="RegisterButton" Background="DarkOrange"></Button>
-                    <Button Text="Sil" FontSize="19" Clicked="DeleteButton" Background="DarkOrange"></Button>
+                    <Button Text="Not Al" FontSize="19" TextColor="White" Clicked="AddNoteButton" Background="SaddleBrown"></Button>
+                    <Button Text="Sil" FontSize="19" TextColor="White" Clicked="DeleteButton" Background="SaddleBrown"></Button>
                 </StackLayout>
 
             </StackLayout>

@@ -21,7 +21,7 @@ namespace BkmKitap.SQlite
 
 
         //Handle Save
-        private async void RegisterButton(object sender, EventArgs e)
+        private async void AddNoteButton(object sender, EventArgs e)
         {
             var note = BindingContext as Note;
             await App.Database.SaveNoteAsync(note);
